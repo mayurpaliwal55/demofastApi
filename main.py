@@ -9,7 +9,6 @@ from fastapi.responses import JSONResponse
 from google.cloud import bigquery
 from google.oauth2 import service_account
 
-
 key_path = "service_account.json"
 
 credentials = service_account.Credentials.from_service_account_file(
@@ -38,7 +37,6 @@ async def process(x:str):
             job.destination.table_id,
         )
     )
-
     return { "message":"success"}
     
     
